@@ -5,21 +5,31 @@ import { App } from './App';
 
 createServer({
   routes(){
-    this.namespace ='api';
+      this.namespace ='api';
 
-    this.get('/transactions', () => {
-      return [
-        {
-          id: 1,
-          title: 'transaction 1',
-          amount: 400,
-          type: 'deposito', 
-          category: 'Food',
-          createdAt: new Date()
-        }
-      ]
-    })
-  }
+      this.get('/transactions', () => {
+        return [
+          {
+            id: 1,
+            title: 'transaction 1',
+            amount: 400,
+            type: 'deposito', 
+            category: 'Food',
+            createdAt: new Date()
+          }
+        ]
+      })
+
+      this.post('/transactions', (schema, request) => {
+        const data = JSON.parse(request.requestBody)
+
+        return data 
+
+      })
+
+  }  
+
+
 })
 
 ReactDOM.render(
