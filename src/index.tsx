@@ -18,15 +18,15 @@ createServer({
         type: 'deposite',
         category: 'Dev',
         amount: 6000,
-        cratedAt: new Date('2021-02-12 09:00:00'),
+        createdAt: new Date('2021-02-12 09:00:00'),
       },
       {
         id: 2,
         title: 'Aluguel',
-        tupe: 'withdraw',
+        type: 'withdraw',
         category: 'Casa',
         amount: 1100,
-        cratedAt: new Date('2021-02-14 11:00:00'),
+        createdAt: new Date('2021-02-14 11:00:00'),
       }
       ]
     })
